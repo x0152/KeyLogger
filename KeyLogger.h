@@ -34,7 +34,7 @@ public:
 <<<<<<< Updated upstream
     void WriteEventKeys(ostream& buf /* out */);
 =======
-    void WriteEventKeys(HttpSender* sender);
+    void WriteEventKeys(TcpSender* sender);
 >>>>>>> Stashed changes
 };
 

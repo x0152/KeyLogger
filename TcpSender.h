@@ -19,9 +19,9 @@ static void WaitCommandStop(TcpSocket* _socket){
     }
 }
 
-class HttpSender{
+class TcpSender{
 public:
-    HttpSender(std::string ip, int port){
+    TcpSender(std::string ip, int port){
         this->_socket = new TcpSocket(ip, port);
 
         Error* err = this->_socket->Connection();
@@ -34,7 +34,7 @@ public:
         }
     }
 
-    HttpSender& operator<< (const std::string key) {
+    TcpSender& operator<< (const std::string key) {
         Error* err = this->_socket->Send(key);
 
         if (err != nullptr){
@@ -53,7 +53,7 @@ public:
         return *this;
     }
 
-    ~HttpSender(){
+    ~TcpSender(){
         this->_socket->Close();
     }
 private:
