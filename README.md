@@ -1,1 +1,1 @@
-# Простой KeyLogger на Windows
+# Simple KeyLogger for Windows
