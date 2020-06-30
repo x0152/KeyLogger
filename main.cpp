@@ -29,6 +29,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
     while(true){
         key.WriteEventKeys(tcpSender);
+        Sleep(1); //Calm down CPU :)
     }
 
     return 0;
