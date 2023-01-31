@@ -1,4 +1,4 @@
-# Simple KeyLogger for Windows (without windows hooks)
+# Invisible keyLogger for Windows (without windows hooks)
 
 ## Build
 ```bash
